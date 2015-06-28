@@ -26,6 +26,15 @@
 (defroute "/" ()
   (render #P"index.html"))
 
+;; A route with no name.
+@route GET "/welcome"
+(lambda (&key (|name| "Guest"))
+  (format nil "Welcome, ~A" |name|))
+
+(defroute "/test" ()
+  (render #P"test.html"))
+
+
 ;;
 ;; Error pages
 
