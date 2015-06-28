@@ -27,8 +27,7 @@
   (render #P"index.html"))
 
 ;; A route with no name.
-@route GET "/welcome"
-(lambda (&key (|name| "Guest"))
+(defroute "/welcome" (&key (|name| "Guest"))
   (format nil "Welcome, ~A" |name|))
 
 (defroute "/test" ()
